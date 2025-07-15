@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Page</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+        }
+        :root{
+            --primary-color:#1c291a4d;
+            --secondary-color:#45aa45;
+            --tertiary-color:#6bbd35;
+        }
+        header{
+            background-color: var(--secondary-color);
+            border: 1px solid black;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+        header span{
+            margin: 0 10px;
+            color: var(--primary-color);
+            font-size: 25px;
+            font-weight: 550;
+        }
+        header nav ul{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            margin: 0 20px;  
+            gap: 20px;
+            list-style: none;
+        }
+        header nav ul li a{
+            color: var(--primary-color);
+            text-decoration: none;
+            font-size: 25px;
+            font-weight: 500;
+        }
+        section{
+            background-color: var(--tertiary-color);
+            border: 1px solid black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <span>Muhammad Hashir</span>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h1>Multi Color Web Page</h1>
+            <p>This is a Multi Color Web Page</p>
+        </section>
+    </main>
+</body>
+</html>

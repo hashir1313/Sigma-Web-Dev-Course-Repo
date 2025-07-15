@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bounce Animation</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+        .ball{
+            display: inline-block;
+            background-color: red;
+            width: 40px;
+            height: 40px;
+            border-radius: 40px;
+            transition: all;
+        }
+        .ball{
+            animation: bounce 1s cubic-bezier(0.62, 1.19, 1, 0.98) infinite alternate;
+        }
+        @keyframes bounce {
+            from {
+                transform: translateY(0);
+            }
+            to {
+                transform: translateY(-200px);
+            }
+        }
+        button{
+            background-color: grey;
+            padding: 5px;
+            border: 1px solid black;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button svg{
+            width: 50px;
+            height: 50px;    
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <span class="ball"></span>
+        <div class="btn-con">
+            <button onclick="startbouncing()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play" viewBox="0 0 16 16">
+      <path d="M10.804 8 5 4.633v6.734zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696z"/>
+    </svg></button>
+            <button onclick="stopbouncing()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pause" viewBox="0 0 16 16">
+      <path d="M6 3.5a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5m4 0a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5"/>
+    </svg></button>
+        </div>
+    </div>
+    <script>
+        function startbouncing(){
+            document.querySelector(".ball").style.animationPlayState = "running";
+        }
+        function stopbouncing(){
+            document.querySelector(".ball").style.animationPlayState = "paused";
+        }
+    </script>
+</body>
+</html>

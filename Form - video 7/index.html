@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <form action="post">
+        <div>
+            <label for="username">Enter Your Username:</label>
+            <input type="text" name="username" id="username" placeholder="Enter Your Username">
+        </div>
+        <div>
+            <label for="gender">Select your gender:</label>
+            <input type="radio" name="gender" id="male" value="male">
+            <label for="male">Male</label>
+            <input type="radio" name="gender" id="female" value="female">
+            <label for="female">Female</label>
+        </div>
+        <div>
+            <label for="subject">Select Subjects:</label>
+            <input type="checkbox" name="subject" id="english" value="english">
+            <label for="english">English</label>
+            <input type="checkbox" name="subject" id="urdu" value="urdu">
+            <label for="urdu">Urdu</label>
+            <input type="checkbox" name="subject" id="arabic" value="arabic">
+            <label for="arabic">Arabic</label>
+        </div>
+        <div>
+            <label for="lang">Select Language:</label>
+            <select name="lang" id="lang">]
+                <option value="english">English</option>
+                <option value="urdu">Urdu</option>
+                <option value="arabic">Arabic</option>
+            </select>
+        </div>
+        <div>
+            <label for="request">Any other request: (optional)</label>
+            <br>
+            <textarea name="request" id="request" rows="2">Enter your request here .....</textarea>
+            <br>
+            <input type="button" name="submit" id="submit" title="submit" value="Submit">
+        </div>
+    </form>
+</body>
+</html>
